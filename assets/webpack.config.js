@@ -31,23 +31,19 @@ module.exports = (env, options) => {
           test: /\.js$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader'
-          }
+            loader: "babel-loader",
+          },
         },
         {
           test: /\.[s]?css$/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            'css-loader',
-            'sass-loader',
-          ],
-        }
-      ]
+          use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+        },
+      ],
     },
     plugins: [
       new MiniCssExtractPlugin({ filename: '../css/app.css' }),
       new CopyWebpackPlugin([{ from: 'static/', to: '../' }])
     ]
-    .concat(devMode ? [new HardSourceWebpackPlugin()] : [])
+      .concat(devMode ? [new HardSourceWebpackPlugin()] : [])
   }
 };
