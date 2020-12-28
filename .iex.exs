@@ -1,0 +1,1 @@
+alias Coins.Exchanges.CoinbaseClient
