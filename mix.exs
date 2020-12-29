@@ -44,7 +44,7 @@ defmodule Coins.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:gun, "~> 1.3"},
-      {:cowlib, "~> 2.7.0", override: true},
+      {:cowlib, "~> 2.10.1", override: true},
       {:ex_check, "~> 0.13.0", only: :dev, runtime: false},
       {:credo, ">= 0.0.0", only: :dev, runtime: false},
       {:dialyxir, ">= 0.0.0", only: :dev, runtime: false},
