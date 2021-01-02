@@ -18,7 +18,7 @@ config :coins, CoinsWeb.Endpoint,
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id]
+  metadata: [:request_id, :label]
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
